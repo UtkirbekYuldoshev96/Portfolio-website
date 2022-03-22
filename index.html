@@ -337,6 +337,7 @@
         </div>
         <!-- /.container -->
     </section>
+    
     <!-- ===============  Portfolio  ==================== -->
     <section class="portfolio section" id="portfolio">
         <div class="container">
@@ -562,9 +563,22 @@
                 <form action="#" class="contact-form padd-15">
                     <div class="contact-inputs">
                         <div class="contact-content">
-                            <input type="email" class="contact-input" placeholder="Enter">
+                            <input type="email" class="contact-input" id="email" placeholder="Enter">
+                            <label for="email" class="contact-label">Email</label>
+                            <span></span>
+                        </div>
+                        <div class="contact-content">
+                            <input type="text" class="contact-input" id="text" placeholder="Enter">
+                            <label for="text" class="contact-label">Subject</label>
+                            <span></span>
+                        </div>
+                        <div class="contact-content">
+                            <textarea name="" id="message" cols="30" rows="10" class="contact--input"></textarea>
+                            <label for="message" class="contact-label">Message</label>
+                            <span></span>
                         </div>
                     </div>
+                    <a href="#" class="btn btn-default">Send Message</a>
                 </form>
             </div>
         </div>
