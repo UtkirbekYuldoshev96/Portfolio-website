@@ -53,7 +53,15 @@
     padding-right: 15px;
 }
 /*========== Responsive Typography ==========*/
-
+@media screen and (max-width: 992px) {
+    :root{
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1rem;
+        --normal-font-size: .938rem;
+        --small-font-size: .813rem;
+    }
+}
 /*========== Base ==========*/
 *{
     margin: 0;
@@ -109,7 +117,7 @@ h3{
     padding-bottom: 4.75rem;
 }
 .section-title {
-    font-size: 2.25rem;
+    font-size: var(--h1-font-size);
     margin-left: var(--m-0-75);
     margin-bottom: var(--m-2-5);
 }
@@ -447,6 +455,7 @@ header{
 .prices{
     flex: 0 0 33.33%;
     max-width: 33.33%;
+    display: flex;
 }
 .prices:nth-child(odd){
     margin-top: 1.5rem;
@@ -656,6 +665,7 @@ header{
 .blog-item{
     flex: 0 0 33.33%;
     max-width: 33.33%;
+    display: flex;
 }
 .blog-item .inner{
     background: var(--color-white);
@@ -851,6 +861,7 @@ header{
     display: grid;
     place-items: center;
     font-size: var(--small-font-size);
+    display: none;
 }
 .customize-theme .card{
     background-color: var(--color-white);
@@ -937,9 +948,13 @@ header{
     padding: 0.8rem 0.20rem;
     width: 100%;
     display: flex;
+    justify-content: space-evenly;
     align-items: center;
     border-radius: 0.4rem;
     cursor: pointer;
+}
+.customize-theme .choose-bg > div.active{
+    border: 2px solid var(--color-primary);
 }
 .customize-theme .choose-bg .bg-1{
     background: var(--color-light);
@@ -967,7 +982,36 @@ header{
 }
 /*========= Planshet =================*/
 @media only screen and (max-width: 968px){
-
+    .about-content,
+    .about-img{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .about-img{
+        text-align: center;
+        margin-bottom: var(--m-2-5);
+    }
+    .prices, .servises .servises-item{
+        flex: 0 0 50%;
+        max-width: 50%;
+        margin-bottom: var(--m-2-5);
+    }
+    .prices-item .bast{
+        padding: var(--card-padding);
+    }
+    .prices:nth-child(odd){
+        margin-top: 0;
+    }
+    .prices:nth-child(1){
+        padding-right: 15px;
+    }
+    .prices:nth-child(2){
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .prices:nth-child(3){
+        padding-left: 15px;
+    }
 }
 /*========= Phone ===================*/
 @media only screen and(max-width: 768px){
