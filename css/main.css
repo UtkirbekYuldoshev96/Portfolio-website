@@ -201,6 +201,13 @@ header{
 .nav-link:hover{
     color: var(--color-primary);
 }
+.nav-close{
+    font-size: 1rem;
+    position: absolute;
+    top: 1rem;
+    right: 1.25rem;
+    cursor: pointer;
+}
 .nav-btns{
     display: inline-flex;
     align-items: center;
@@ -214,6 +221,7 @@ header{
     font-size: 1.2rem;
     cursor: pointer;
 }
+.nav-close,
 .nav-toggle{
     display: none;
 }
@@ -1015,7 +1023,33 @@ header{
 }
 /*========= Phone ===================*/
 @media only screen and(max-width: 768px){
-
+ body{
+     margin: var(--header-height) 0 0 0;
+ }
+    .nav{
+        height: var(--header-height);
+    }
+    .nav-list{
+        flex-direction: column;
+        row-gap: 1.5rem;
+    }
+    .nav-menu{
+        position: fixed;
+        background: var(--color-white);
+        width: 80%;
+        height: 100%;
+        top: 0;
+        right: 100%;
+        padding: 4rem 0 0 3rem;
+        box-shadow: -2px 0 4px var(--color-dark);
+        border-radius: 1rem 0 0 1rem;
+        z-index: 150;
+        transition: .3s;
+    }
+    .nav-close,
+    .nav-toggle{
+        display: inline-flex;
+    }
 }
 /*==========Samsung G2 =============*/
 @media only screen and(max-width: 576px) {
