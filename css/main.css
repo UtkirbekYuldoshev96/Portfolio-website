@@ -68,6 +68,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 body, button, input, textarea {
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
@@ -237,6 +240,9 @@ header{
     height: 0.3rem;
     background-color: var(--color-primary);
     border-radius: 50%;
+}
+.scroll-header{
+    box-shadow: 0 1px 4px rgba(165, 125, 125, 0.02);
 }
 /*========== Home ==========*/
 .home{
@@ -463,7 +469,6 @@ header{
 .prices{
     flex: 0 0 33.33%;
     max-width: 33.33%;
-    display: flex;
 }
 .prices:nth-child(odd){
     margin-top: 1.5rem;
@@ -864,7 +869,7 @@ header{
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 0;
+    z-index: 100;
     text-align: center;
     display: grid;
     place-items: center;
@@ -983,79 +988,3 @@ header{
     border-radius: 50%;
 }
 
-/*========== Media Queries ==========*/
-/*========== Nootbook ===============*/
-@media only screen and (max-width: 1200px){
-
-}
-/*========= Planshet =================*/
-@media only screen and (max-width: 968px){
-    .about-content,
-    .about-img{
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-    .about-img{
-        text-align: center;
-        margin-bottom: var(--m-2-5);
-    }
-    .prices, .servises .servises-item{
-        flex: 0 0 50%;
-        max-width: 50%;
-        margin-bottom: var(--m-2-5);
-    }
-    .prices-item .bast{
-        padding: var(--card-padding);
-    }
-    .prices:nth-child(odd){
-        margin-top: 0;
-    }
-    .prices:nth-child(1){
-        padding-right: 15px;
-    }
-    .prices:nth-child(2){
-        padding-right: 15px;
-        padding-left: 15px;
-    }
-    .prices:nth-child(3){
-        padding-left: 15px;
-    }
-}
-/*========= Phone ===================*/
-@media only screen and(max-width: 768px){
- body{
-     margin: var(--header-height) 0 0 0;
- }
-    .nav{
-        height: var(--header-height);
-    }
-    .nav-list{
-        flex-direction: column;
-        row-gap: 1.5rem;
-    }
-    .nav-menu{
-        position: fixed;
-        background: var(--color-white);
-        width: 80%;
-        height: 100%;
-        top: 0;
-        right: 100%;
-        padding: 4rem 0 0 3rem;
-        box-shadow: -2px 0 4px var(--color-dark);
-        border-radius: 1rem 0 0 1rem;
-        z-index: 150;
-        transition: .3s;
-    }
-    .nav-close,
-    .nav-toggle{
-        display: inline-flex;
-    }
-}
-/*==========Samsung G2 =============*/
-@media only screen and(max-width: 576px) {
-    
-}
-/*========== Phone Standart ============*/
-@media only screen and(max-width: 320px) {
-
-}

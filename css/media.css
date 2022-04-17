@@ -1,0 +1,142 @@
+@import "main.css";
+
+/*========== Media Queries ==========*/
+/*========== Nootbook ===============*/
+@media only screen and (max-width: 1200px){
+    .customize-theme .card{
+        width: 50vw;
+    }
+}
+/*========= Planshet =================*/
+@media only screen and (max-width:968px){
+    .about-content, .about-img{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .about-img{
+        text-align: center;
+        margin-bottom: var(--m-2-5);
+    }
+    .prices, .servises .servises-item{
+        flex: 0 0 50%;
+        max-width: 50%;
+        margin-bottom: var(--m-2-5);
+    }
+    .prices-item .bast{
+        padding: var(--card-padding);
+    }
+    .prices:nth-child(odd){
+        margin-top: 0;
+    }
+    .prices:nth-child(1){
+        padding-right: 15px;
+    }
+    .prices:nth-child(2){
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .prices:nth-child(3){
+        padding-left: 15px;
+    }
+    .customize-theme .card{
+        max-width: 58vw;
+    }
+
+}
+/*========= Phone ===================*/
+@media only screen and(max-width:768px) {
+    body{
+        /*margin: var(--header-height) 0 0 0;*/
+    }
+    .container{
+        max-width: 568px;
+    }
+    .nav{
+        height: var(--header-height);
+    }
+    .nav-list{
+        flex-direction: column;
+        row-gap: 1.5rem;
+    }
+    .nav-menu{
+        position: fixed;
+        background: var(--color-white);
+        width: 80%;
+        height: 100%;
+        top: 0;
+        right: -100%;
+        padding: 4rem 0 0 3rem;
+        /*box-shadow: -2px 0 4px var(--color-dark);*/
+        border-radius: 1rem 0 0 1rem;
+        z-index: 100;
+        transition: .3s;
+    }
+    .show-menu {
+        right: 0;
+    }
+    .nav-close,
+    .nav-toggle{
+        display: inline-flex;
+    }
+    .contact-data,
+    .contact-form,
+    .prices,
+    .education,
+    .experiense,
+    .servises .servises-item,
+    .about-content .about-text,
+    .about-content .skills{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .fact-item,
+    .blog-item,
+    .portfolio-item
+    {
+        flex: 0 0 50%;
+        max-width: 100%;
+    }
+    .about-content .about-text{
+        margin-bottom: var(--m-1-5);
+    }
+    .contact-data,
+    .blog-item,
+    .education
+    {
+        margin-bottom: var(--m-2-5);
+    }
+    .customize-theme .card{
+        max-width: 75vw;
+    }
+}
+/*==========Samsung G2 =============*/
+@media only screen and(max-width:576px) {
+    .blog-item,
+    .portfolio-item{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .blog-item .inner,
+    .portfolio-item-inner{
+        max-width: 360px;
+        margin: 0 auto;
+    }
+    .timeline{
+        padding: 25px 20px;
+    }
+    .timeline .timeline-item{
+        padding-left: 35px;
+        padding-bottom: 20px;
+    }
+    .customize-theme .card{
+        max-width: 96vw;
+        padding: 1rem;
+    }
+}
+/*========== Phone Standart ============*/
+@media only screen and(max-width:320px) {
+    .fact-item{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
