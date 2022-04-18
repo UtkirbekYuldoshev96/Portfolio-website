@@ -52,6 +52,35 @@ let swiper = new Swiper(".testimonial-wrapper", {
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 
 /*=============== PORTFOLIO ITEM FILTER ===============*/
+const filterContent = document.querySelector('.portfolio-filter-inner'),
+    filterBtns = filterContent.children,
+    totalFilter = filterBtns.length,
+    poritfoiItems = document.querySelectorAll('.portfolio-item');
+    totalPortifoli = poritfoiItems.length;
+    // console.log(totalPortifoli);
+
+// console.log(filterContent);
+    for (let i = 0; i < totalFilter; i++){
+        // console.log(totalFilter[i]);
+        filterBtns[i].addEventListener("click", function () {
+            // console.log(this.innerHTML);
+            filterContent.querySelector(".active").classList.remove("active");
+            this.classList.add('active');
+
+            const filterVAlue = this.getAttribute('data-filter');
+            for (let k = 0; k < totalPortifoli; k++){
+                if (filterVAlue === poritfoiItems[k].getAttribute("data-category")){
+                    poritfoiItems[k].classList.remove("hide");
+                    poritfoiItems[k].classList.add("show");
+
+                }
+                else{
+                    poritfoiItems[k].classList.remove("show");
+                    poritfoiItems[k].classList.add("hide");
+                }
+            }
+    })
+}
 
 /*=============== THEME/DISPLAY CUSTOMIZATION ===============*/
 const theme = document.querySelector('#them-button');
