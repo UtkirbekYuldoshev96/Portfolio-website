@@ -544,6 +544,7 @@ header{
     text-transform: capitalize;
     margin: 0 var(--m-0-75);
     cursor: pointer;
+    color: var(--color-dark);
     white-space: nowrap;
     transition: 0.3s;
 }
@@ -970,8 +971,8 @@ header{
     border: 2px solid var(--color-primary);
 }
 .customize-theme .choose-bg .bg-1{
-    background: var(--color-light);
-    color: var(--color-dark);
+    background: hsl(252, 30%, 92%);
+    color: hsl(252, 30%, 17%);
 }
 .customize-theme .choose-bg .bg-2{
     background: hsl(252, 30%, 17%);
