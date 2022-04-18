@@ -50,6 +50,25 @@ let swiper = new Swiper(".testimonial-wrapper", {
 //     },
 // });
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
+const section = document.querySelectorAll("section[id]");
+
+window.addEventListener("scroll", navHigahte);
+
+function navHigahte() {
+    let scrollY = window.pageYOffset;
+    section.forEach(current => {
+        const sectionHeighnt = current.offsetHeight;
+        const sectionTop = current.offsetTop - 50;
+        sectionId = current.getAttribute('id');
+
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeighnt){
+            document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.add("active-link");
+        }
+        else{
+            document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.remove("active-link");
+        }
+    })
+}
 
 /*=============== PORTFOLIO ITEM FILTER ===============*/
 const filterContent = document.querySelector('.portfolio-filter-inner'),
@@ -77,6 +96,10 @@ const filterContent = document.querySelector('.portfolio-filter-inner'),
                 else{
                     poritfoiItems[k].classList.remove("show");
                     poritfoiItems[k].classList.add("hide");
+                }
+                if (filterVAlue === "all"){
+                    poritfoiItems[k].classList.remove("hide");
+                    poritfoiItems[k].classList.add("show");
                 }
             }
     })
